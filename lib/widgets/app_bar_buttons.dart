@@ -18,8 +18,8 @@ class AppBarButton extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            width: 40,
-            height: 40,
+            width: 34,
+            height: 34,
             decoration: BoxDecoration(color: color, shape: BoxShape.circle),
             child: Icon(
               iconData,
@@ -35,12 +35,13 @@ class AppBarButton extends StatelessWidget {
                 width: 14,
                 height: 14,
                 decoration: BoxDecoration(
-                    color: Colors.red,
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      width: 3,
-                      color: Colors.white,
-                    )),
+                  color: Colors.red,
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    width: 3,
+                    color: Colors.white,
+                  ),
+                ),
               ),
             )
         ],

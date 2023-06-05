@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class AppBarButton extends StatelessWidget {
+class CircularButtons extends StatelessWidget {
   final Color color;
   final IconData iconData;
   final bool notify;
 
-  const AppBarButton({
+  const CircularButtons({
     super.key,
     required this.color,
     required this.iconData,

@@ -4,7 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../icons/custom_icons_icons.dart';
 import '../widgets/circular_buttons.dart';
 import '../widgets/en_que_estas_pensando.dart';
-import '../widgets/quick_actions.dart';
+import '../widgets/_quick_actions.dart';
+import '../widgets/stories.dart';
 
 class Facebook extends StatelessWidget {
   const Facebook({super.key});
@@ -28,49 +29,33 @@ class Facebook extends StatelessWidget {
             color: Colors.grey,
             iconData: CustomIcons.search,
           ),
-          SizedBox(width: 14),
+          SizedBox(width: 20),
           CircularButtons(
             color: Color.fromARGB(255, 250, 120, 111),
             iconData: CustomIcons.bell,
           ),
-          SizedBox(width: 14),
+          SizedBox(width: 20),
           CircularButtons(
             color: Color.fromARGB(255, 120, 194, 255),
             iconData: CustomIcons.userFriends,
             notify: true,
           ),
-          SizedBox(width: 14),
+          SizedBox(width: 20),
           CircularButtons(
             color: Colors.blue,
             iconData: CustomIcons.messenger,
           ),
-          SizedBox(width: 14),
+          SizedBox(width: 20),
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 10).copyWith(top: 15),
-        children: [
-          const EnQueEstasPensando(),
-          const SizedBox(height: 20),
-          Row(
-            children: const [
-              QuickActions(
-                color: Color(0xFF56FC71),
-                icon: CustomIcons.photos,
-                text: 'Gallery',
-              ),
-              QuickActions(
-                color: Colors.blue,
-                icon: CustomIcons.userFriends,
-                text: 'Tag friends',
-              ),
-              QuickActions(
-                color: Color(0xFFFF6868),
-                icon: CustomIcons.videoCamera,
-                text: 'Live',
-              ),
-            ],
-          )
+        children: const [
+          SizedBox(height: 10),
+          EnQueEstasPensando(),
+          SizedBox(height: 20),
+          FittedBoxQuickActions(),
+          SizedBox(height: 20),
+          Stories(),
         ],
       ),
     );

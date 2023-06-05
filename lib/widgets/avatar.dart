@@ -3,19 +3,26 @@ import 'package:flutter/material.dart';
 class Avatar extends StatelessWidget {
   final String avatar;
   final double size;
-  const Avatar({super.key, required this.avatar, required this.size});
+  final double borderWidth;
+  const Avatar(
+      {super.key,
+      required this.avatar,
+      required this.size,
+      this.borderWidth = 0});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ClipRRect(
-        borderRadius: BorderRadius.all(
-          Radius.circular(size),
+    return Container(
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+        border: Border.all(
+          width: borderWidth,
+          color: Colors.white,
         ),
-        child: Image.asset(
-          avatar,
-          width: size,
-          height: size,
+        shape: BoxShape.circle,
+        image: DecorationImage(
+          image: AssetImage(avatar),
         ),
       ),
     );

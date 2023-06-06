@@ -1,6 +1,5 @@
 import 'package:facebook_ui/models/story.dart';
 import 'package:flutter/material.dart';
-
 import 'avatar.dart';
 
 final _stories = [

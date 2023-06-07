@@ -81,6 +81,12 @@ flutter:
     - assets/wallpapers/4.jpeg
     - assets/wallpapers/5.jpeg
     - assets/wallpapers/6.jpeg
+    - assets/emojis/angry.svg
+    - assets/emojis/heart.svg
+    - assets/emojis/laughing.svg
+    - assets/emojis/sad.svg
+    - assets/emojis/shocked.svg
+    - assets/emojis/like.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -29,10 +29,10 @@ class User {
 }
 
 enum Reactions {
-  angrey,
+  like,
   heart,
   laughing,
-  like,
   sad,
+  angrey,
   shocked,
 }

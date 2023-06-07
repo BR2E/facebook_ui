@@ -1,16 +1,11 @@
-# facebook_ui
+# facebook UI en Flutter
 
-A new Flutter project.
+En este proyecto se intento replicar la interfaz de Facebook apegandose lo mas posible al siguiente diseño y se implementaron algunos Widgets para que la interfaz se adaptara a diferentes dispositivos.
 
-## Getting Started
+## Diseño original
+![](./assets/readme/3.jpeg) ![]
 
-This project is a starting point for a Flutter application.
+## Imagenes del proyecto
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![](./assets/readme/1.jpeg) ![]
+![](./assets/readme/2.jpeg) ![]

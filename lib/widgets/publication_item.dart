@@ -67,19 +67,21 @@ class PublicationItem extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Row(
               children: [
-                const Avatar(
-                  avatar: 'assets/users/1.jpg',
+                Avatar(
+                  avatar: publication.user.avatar,
                   size: 40,
                 ),
                 const SizedBox(
                   width: 10,
                 ),
-                Text(
-                  publication.user.name,
-                  style: style,
-                  maxLines: 1,
+                Expanded(
+                  child: Text(
+                    publication.user.name,
+                    style: style,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
                 ),
-                const Spacer(),
                 Text(
                   timeago.format(publication.date),
                   style: style,

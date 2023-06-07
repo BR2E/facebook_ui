@@ -7,6 +7,7 @@ import '../icons/custom_icons_icons.dart';
 import '../widgets/circular_buttons.dart';
 import '../widgets/en_que_estas_pensando.dart';
 import '../widgets/_quick_actions.dart';
+import '../widgets/publication_item.dart';
 import '../widgets/stories.dart';
 
 class Facebook extends StatelessWidget {
@@ -17,7 +18,7 @@ class Facebook extends StatelessWidget {
     final faker = Faker();
     final publications = <Publication>[];
 
-    for (int i = 0; i < 50; i++) {
+    for (int i = 0; i < 25; i++) {
       final random = faker.randomGenerator;
       final publication = Publication(
         user: User(
@@ -71,13 +72,22 @@ class Facebook extends StatelessWidget {
         ],
       ),
       body: ListView(
-        children: const [
-          SizedBox(height: 10),
-          EnQueEstasPensando(),
-          SizedBox(height: 20),
-          FittedBoxQuickActions(),
-          SizedBox(height: 20),
-          Stories(),
+        children: [
+          const SizedBox(height: 10),
+          const EnQueEstasPensando(),
+          const SizedBox(height: 20),
+          const FittedBoxQuickActions(),
+          const SizedBox(height: 20),
+          const Stories(),
+          const SizedBox(height: 30),
+          ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemBuilder: (_, index) => PublicationItem(
+              publication: publications[index],
+            ),
+            itemCount: publications.length,
+          ),
         ],
       ),
     );
